@@ -1,8 +1,10 @@
 package com.company.sql.db.store.it;
 
+import com.company.sql.db.store.it.MSSQLTestResource;
 import com.company.sql.db.store.runtime.ReactiveStoreProcedureService;
 //import io.quarkus.hibernate.orm.PersistenceUnit;
 import io.quarkus.hibernate.orm.PersistenceUnit;
+import io.quarkus.test.common.QuarkusTestResource;
 import io.quarkus.test.junit.QuarkusTest;
 import io.quarkus.test.vertx.RunOnVertxContext;
 import jakarta.enterprise.inject.Default;
@@ -14,6 +16,7 @@ import java.util.Map;
 import io.quarkus.test.vertx.UniAsserter;
 
 @QuarkusTest
+@QuarkusTestResource(MSSQLTestResource.class)
 class SqlDbStoreResourceIT {
 
     @Inject
